@@ -1,3 +1,465 @@
----
-layout: home
----
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GooDongWoo의 개인 포트폴리오 & 기술 블로그">
+    <title>GooDongWoo - 포트폴리오 & 블로그</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/portfolio.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#home" class="logo">
+                    <span class="logo-text">GooDongWoo</span>
+                </a>
+
+                <div class="nav-menu" id="navMenu">
+                    <a href="#home" class="nav-link">홈</a>
+                    <a href="#about" class="nav-link">소개</a>
+                    <a href="#projects" class="nav-link">프로젝트</a>
+                    <a href="#blog" class="nav-link">블로그</a>
+                    <a href="#contact" class="nav-link">연락</a>
+                </div>
+
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="gradient-bg"></div>
+            <div class="particles"></div>
+        </div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-subtitle">안녕하세요! 👋</p>
+                    <h1 class="hero-title">
+                        저는 <span class="gradient-text">GooDongWoo</span>입니다
+                    </h1>
+                    <p class="hero-description">
+                        열정적인 개발자로서, 코드를 통해 세상을 더 나은 곳으로 만들어가고 있습니다.
+                        새로운 기술을 배우고 공유하는 것을 좋아합니다.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>프로젝트 보기</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>연락하기</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="profile-card">
+                        <div class="profile-img-wrapper">
+                            <img src="/avatar.jpeg" alt="Profile" class="profile-img">
+                            <div class="profile-ring"></div>
+                        </div>
+                        <div class="status-badge">
+                            <span class="status-dot"></span>
+                            <span>개발 중</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll Down</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">저를 소개합니다</h2>
+                <p class="section-description">
+                    끊임없이 배우고 성장하는 개발자입니다
+                </p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>안녕하세요! 👨‍💻</h3>
+                    <p>
+                        저는 새로운 기술에 관심이 많고, 문제 해결을 즐기는 개발자입니다.
+                        사용자 경험을 중시하며, 깔끔하고 효율적인 코드를 작성하기 위해 노력합니다.
+                    </p>
+                    <p>
+                        오픈소스 기여와 기술 블로그 작성을 통해 지식을 공유하고 있으며,
+                        다양한 프로젝트를 통해 실력을 향상시키고 있습니다.
+                    </p>
+
+                    <div class="skills-section">
+                        <h4>기술 스택</h4>
+                        <div class="skills-grid">
+                            <div class="skill-tag">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-tag">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-tag">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="skill-tag">
+                                <i class="fab fa-node"></i>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="skill-tag">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-tag">
+                                <i class="fas fa-database"></i>
+                                <span>Database</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="stat-number" data-target="50">0</h3>
+                        <p class="stat-label">프로젝트</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-blog"></i>
+                        </div>
+                        <h3 class="stat-number" data-target="100">0</h3>
+                        <p class="stat-label">블로그 글</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3 class="stat-number" data-target="200">0</h3>
+                        <p class="stat-label">커밋</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">프로젝트</h2>
+                <p class="section-description">
+                    제가 만든 다양한 프로젝트들을 소개합니다
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/6366f1/ffffff?text=Project+1" alt="Project 1">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">TypeScript</span>
+                        </div>
+                        <h3 class="project-title">프로젝트 제목 1</h3>
+                        <p class="project-description">
+                            프로젝트에 대한 간단한 설명입니다. 어떤 기술을 사용했고,
+                            어떤 문제를 해결했는지 설명합니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/ec4899/ffffff?text=Project+2" alt="Project 2">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Django</span>
+                        </div>
+                        <h3 class="project-title">프로젝트 제목 2</h3>
+                        <p class="project-description">
+                            프로젝트에 대한 간단한 설명입니다. 어떤 기술을 사용했고,
+                            어떤 문제를 해결했는지 설명합니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/8b5cf6/ffffff?text=Project+3" alt="Project 3">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express</span>
+                        </div>
+                        <h3 class="project-title">프로젝트 제목 3</h3>
+                        <p class="project-description">
+                            프로젝트에 대한 간단한 설명입니다. 어떤 기술을 사용했고,
+                            어떤 문제를 해결했는지 설명합니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-footer">
+                <a href="https://github.com/GooDongWoo" class="btn btn-outline" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub에서 더 보기</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Blog</span>
+                <h2 class="section-title">최근 블로그 글</h2>
+                <p class="section-description">
+                    개발하면서 배운 것들을 기록하고 공유합니다
+                </p>
+            </div>
+
+            <div class="blog-grid">
+                <!-- Blog Card 1 -->
+                <article class="blog-card">
+                    <div class="blog-header">
+                        <span class="blog-date">
+                            <i class="far fa-calendar"></i>
+                            2024-01-15
+                        </span>
+                        <span class="blog-category">개발</span>
+                    </div>
+                    <h3 class="blog-title">
+                        <a href="/dates/">블로그 글 제목이 여기에 들어갑니다</a>
+                    </h3>
+                    <p class="blog-excerpt">
+                        블로그 글의 간단한 요약이 여기에 표시됩니다.
+                        독자들이 흥미를 가질 수 있도록 핵심 내용을 간추려서 보여줍니다.
+                    </p>
+                    <div class="blog-footer">
+                        <div class="blog-tags">
+                            <span class="tag">#React</span>
+                            <span class="tag">#개발</span>
+                        </div>
+                        <a href="/dates/" class="blog-read-more">
+                            읽기 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 2 -->
+                <article class="blog-card">
+                    <div class="blog-header">
+                        <span class="blog-date">
+                            <i class="far fa-calendar"></i>
+                            2024-01-10
+                        </span>
+                        <span class="blog-category">튜토리얼</span>
+                    </div>
+                    <h3 class="blog-title">
+                        <a href="/dates/">또 다른 블로그 글 제목</a>
+                    </h3>
+                    <p class="blog-excerpt">
+                        블로그 글의 간단한 요약이 여기에 표시됩니다.
+                        독자들이 흥미를 가질 수 있도록 핵심 내용을 간추려서 보여줍니다.
+                    </p>
+                    <div class="blog-footer">
+                        <div class="blog-tags">
+                            <span class="tag">#Python</span>
+                            <span class="tag">#튜토리얼</span>
+                        </div>
+                        <a href="/dates/" class="blog-read-more">
+                            읽기 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 3 -->
+                <article class="blog-card">
+                    <div class="blog-header">
+                        <span class="blog-date">
+                            <i class="far fa-calendar"></i>
+                            2024-01-05
+                        </span>
+                        <span class="blog-category">경험</span>
+                    </div>
+                    <h3 class="blog-title">
+                        <a href="/dates/">프로젝트 회고록</a>
+                    </h3>
+                    <p class="blog-excerpt">
+                        블로그 글의 간단한 요약이 여기에 표시됩니다.
+                        독자들이 흥미를 가질 수 있도록 핵심 내용을 간추려서 보여줍니다.
+                    </p>
+                    <div class="blog-footer">
+                        <div class="blog-tags">
+                            <span class="tag">#회고</span>
+                            <span class="tag">#경험</span>
+                        </div>
+                        <a href="/dates/" class="blog-read-more">
+                            읽기 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="blog-footer-link">
+                <a href="/dates/" class="btn btn-outline">
+                    <span>블로그 전체 보기</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">연락하기</h2>
+                <p class="section-description">
+                    궁금한 점이나 함께 하고 싶은 프로젝트가 있다면 언제든 연락주세요!
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>이메일</h3>
+                        <a href="mailto:your.email@example.com">your.email@example.com</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/GooDongWoo" target="_blank">@GooDongWoo</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h3>포트폴리오</h3>
+                        <a href="https://GooDongWoo.github.io" target="_blank">GooDongWoo.github.io</a>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <h3>소셜 미디어</h3>
+                    <div class="social-icons">
+                        <a href="https://github.com/GooDongWoo" class="social-icon" title="GitHub" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="LinkedIn" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Twitter" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 GooDongWoo. All rights reserved.</p>
+                <p class="footer-tagline">Made with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="/assets/js/portfolio.js"></script>
+</body>
+</html>
