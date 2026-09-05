@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DongWoo Goo (구동우) - SW Engineer & AI Researcher Curriculum Vitae (CV) / Resume">
+    <meta name="author" content="DongWoo Goo">
+    <title>Curriculum Vitae | DongWoo Goo (구동우)</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/cv.css">
+
+    <!-- html2pdf.js for direct client-side PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+    <!-- Sticky Action Toolbar (Hidden on Print) -->
+    <header class="cv-toolbar">
+        <div class="toolbar-left">
+            <a href="../" class="btn-tool" title="블로그 메인으로 이동 / Return to Blog">
+                <i class="fas fa-arrow-left"></i>
+                <span class="lang-ko">홈으로</span>
+                <span class="lang-en">Home</span>
+            </a>
+            <a href="../dates/" class="btn-tool" title="블로그 게시글 목록 / Blog Archive">
+                <i class="fas fa-book-open"></i>
+                <span class="lang-ko">블로그</span>
+                <span class="lang-en">Blog</span>
+            </a>
+        </div>
+
+        <div class="toolbar-right">
+            <!-- Language Selector (EN / KO) - Default: EN -->
+            <div class="lang-switch-group" role="group" aria-label="Language Selector">
+                <button id="langEnBtn" class="btn-lang active" data-lang="en" title="View in English" aria-pressed="true">
+                    <span>EN</span>
+                </button>
+                <button id="langKoBtn" class="btn-lang" data-lang="ko" title="한국어로 보기" aria-pressed="false">
+                    <span>KO</span>
+                </button>
+            </div>
+
+            <!-- Theme Toggle Button -->
+            <button id="themeToggleBtn" class="btn-tool" aria-label="테마 전환 / Toggle Theme" title="다크 / 라이트 모드 전환">
+                <i id="themeIcon" class="fas fa-moon"></i>
+                <span class="lang-ko">테마</span>
+                <span class="lang-en">Theme</span>
+            </button>
+
+            <!-- Browser Print / PDF Save -->
+            <button id="printBtn" class="btn-tool" title="브라우저 인쇄 대화상자 호출 / Print or Save as PDF">
+                <i class="fas fa-print"></i>
+                <span class="lang-ko">인쇄 / PDF</span>
+                <span class="lang-en">Print</span>
+            </button>
+
+            <!-- Direct PDF Download Button -->
+            <button id="exportPdfBtn" class="btn-tool btn-primary" title="원클릭 PDF 다운로드 / Direct PDF Download">
+                <i class="fas fa-file-pdf"></i>
+                <span class="lang-ko">PDF 다운로드</span>
+                <span class="lang-en">Export PDF</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main CV Content Container -->
+    <main class="cv-container">
+        <div class="cv-card" id="cvContent">
+            
+            <!-- Header Section -->
+            <section class="cv-header">
+                <div class="header-avatar">
+                    <img src="../avatar.jpeg" alt="구동우 프로필 사진 / DongWoo Goo">
+                </div>
+                <div class="header-info">
+                    <div class="header-title-row">
+                        <h1 class="candidate-name">DongWoo Goo</h1>
+                        <span class="candidate-name-kr">구동우</span>
+                    </div>
+
+                    <!-- Role (KO / EN) -->
+                    <div class="candidate-role">
+                        <i class="fas fa-code-branch"></i>
+                        <span class="lang-ko">SW Engineer @ <span class="role-company">삼성메디슨 (Samsung Medison)</span></span>
+                        <span class="lang-en">Software Engineer @ <span class="role-company">Samsung Medison</span></span>
+                    </div>
+
+                    <!-- Tagline (KO / EN) -->
+                    <p class="candidate-tagline lang-ko">
+                        어제의 나와 경쟁하며 매일 한 걸음씩 성장하는 엔지니어입니다.<br>
+                        현재 삼성메디슨에서 의료 진단기기 테스트 인터페이스 및 통신 미들웨어를 개발하고 있습니다.
+                    </p>
+                    <p class="candidate-tagline lang-en">
+                        A software engineer dedicated to continuous growth by outperforming yesterday's self.<br>
+                        Currently developing test interfaces and communication middleware for medical diagnostic equipment at Samsung Medison.
+                    </p>
+
+                    <!-- Contact List -->
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:wendy1301@naver.com">wendy1301@naver.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/GooDongWoo" target="_blank">github.com/GooDongWoo</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/%EB%8F%99%EC%9A%B0-%EA%B5%AC-43b270293/" target="_blank">LinkedIn</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-globe"></i>
+                            <a href="https://GooDongWoo.github.io" target="_blank">GooDongWoo.github.io</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-terminal"></i>
+                            <a href="https://solved.ac/gdw1301" target="_blank">solved.ac/gdw1301</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Professional Summary -->
+            <section class="cv-section">
+                <h2 class="section-title">
+                    <i class="fas fa-user-check"></i>
+                    <span class="lang-ko">핵심 역량 요약 (Professional Summary)</span>
+                    <span class="lang-en">Professional Summary</span>
+                </h2>
+                <div class="summary-box lang-ko">
+                    <strong>탄탄한 CS 이론과 현업 실무 역량을 겸비한 소프트웨어 엔지니어</strong>입니다. 경희대학교 전자공학과와 컴퓨터공학과를 복수전공하여 <strong>최우등 수석(총장상, GPA 4.31/4.5)</strong>으로 졸업하였으며, 현재 <strong>삼성메디슨(Samsung Medison)</strong>에서 의료 진단기기 테스트 인터페이스 및 통신 미들웨어를 개발하고 있습니다. 자원 제약 환경에서의 지능형 추론을 위한 <strong>다중 출구 신경망(Multi-Exit Neural Network)</strong> 연구를 주도하여 <strong>J-KICS(SCOPUS) 저널에 공동 1저자</strong>로 논문을 게재하였고, <strong>2024 ICPC 전국 대학생 프로그래밍 경시대회 본선</strong>에 진출하는 등 검증된 알고리즘 문제 해결력과 시스템 최적화 감각을 보유하고 있습니다.
+                </div>
+                <div class="summary-box lang-en">
+                    <strong>Results-driven Software Engineer</strong> bridging deep computer science foundations with hands-on industry expertise. Graduated as <strong>Valedictorian (President's Award, GPA 4.31/4.50)</strong> from Kyung Hee University with a double major in CSE & EE. Currently at <strong>Samsung Medison</strong>, developing test interfaces and communication middleware for medical diagnostic equipment. Co-first author of a published paper in <strong>J-KICS (SCOPUS)</strong> on adaptive multi-exit neural networks and <strong>2024 ICPC Asia Seoul Regional Contest finalist (43rd place)</strong>, possessing verified capabilities in algorithmic optimization, low-level concurrency, and production-grade software delivery.
+                </div>
+            </section>
+
+            <!-- Work Experience -->
+            <section class="cv-section" id="experience">
+                <h2 class="section-title">
+                    <i class="fas fa-briefcase"></i>
+                    <span class="lang-ko">경력 사항 (Work Experience)</span>
+                    <span class="lang-en">Work Experience</span>
+                </h2>
+                <div class="timeline">
+                    
+                    <!-- Samsung Medison -->
+                    <article class="entry-item">
+                        <div class="entry-header">
+                            <div class="entry-main-info">
+                                <h3 class="entry-title">
+                                    <span class="lang-ko">삼성메디슨 (Samsung Medison)</span>
+                                    <span class="lang-en">Samsung Medison</span>
+                                </h3>
+                                <div class="entry-subtitle">
+                                    <span class="lang-ko">SW Engineer</span>
+                                    <span class="lang-en">Software Engineer</span>
+                                </div>
+                            </div>
+                            <div class="entry-date">
+                                <span class="lang-ko">2025.02 – 현재</span>
+                                <span class="lang-en">Feb 2025 – Present</span>
+                                <div class="entry-location">
+                                    <span class="lang-ko">서울, 대한민국</span>
+                                    <span class="lang-en">Seoul, South Korea</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="entry-body">
+                            <p class="entry-description lang-ko">
+                                의료 진단기기 테스트 인터페이스 및 통신 미들웨어 개발
+                            </p>
+                            <p class="entry-description lang-en">
+                                Development of medical diagnostic equipment test interfaces and communication middleware.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="cv-section" id="education">
+                <h2 class="section-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span class="lang-ko">학력 사항 (Education)</span>
+                    <span class="lang-en">Education</span>
+                </h2>
+                <div class="timeline">
+                    <article class="entry-item">
+                        <div class="entry-header">
+                            <div class="entry-main-info">
+                                <h3 class="entry-title">
+                                    <span class="lang-ko">경희대학교 (Kyung Hee University)</span>
+                                    <span class="lang-en">Kyung Hee University</span>
+                                </h3>
+                                <div class="entry-subtitle">
+                                    <span class="lang-ko">컴퓨터공학과 · 전자공학과 (복수전공)</span>
+                                    <span class="lang-en">B.S. in Computer Science &amp; Engineering and Electronic Engineering (Double Major)</span>
+                                    <span class="entry-badge">
+                                        <i class="fas fa-medal"></i>
+                                        <span class="lang-ko">최우등 졸업 (총장상)</span>
+                                        <span class="lang-en">Valedictorian (President's Award)</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry-date">
+                                <span>2019.03 – 2025.02</span>
+                                <div class="entry-location">
+                                    <span class="lang-ko">용인/수원, 대한민국</span>
+                                    <span class="lang-en">Yongin/Suwon, South Korea</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="entry-body">
+                            <ul class="entry-list lang-ko">
+                                <li>
+                                    <strong>학점</strong>: <strong>4.31 / 4.50</strong> (전자정보대학 전체 수석, 최우등 졸업 총장상)
+                                </li>
+                                <li>
+                                    <strong>주요 이수 과목</strong>: 자료구조, 알고리즘, 컴퓨터구조, 운영체제, 시스템프로그래밍, 컴퓨터네트워크, 인공지능, 딥러닝, 디지털신호처리(DSP), 임베디드시스템
+                                </li>
+                                <li>
+                                    <strong>학부 연구생 (Undergraduate Researcher)</strong>: 통신 및 딥러닝 최적화 연구실에서 자원 변동 환경 적응형 다중 출구 신경망 및 동적 앙상블 기법 연구 수행
+                                </li>
+                            </ul>
+                            <ul class="entry-list lang-en">
+                                <li>
+                                    <strong>Academic Performance</strong>: <strong>GPA: 4.31 / 4.50</strong> (Ranked 1st / Valedictorian in College of Electronics &amp; Information, President's Award)
+                                </li>
+                                <li>
+                                    <strong>Relevant Coursework</strong>: Data Structures, Algorithms, Computer Architecture, Operating Systems, Systems Programming, Computer Networks, Artificial Intelligence, Deep Learning, Digital Signal Processing (DSP), Embedded Systems
+                                </li>
+                                <li>
+                                    <strong>Undergraduate Researcher</strong>: Conducted research in the Deep Learning &amp; Wireless Systems Lab on resource-adaptive multi-exit neural networks and dynamic inference ensemble strategies.
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Publications & Research -->
+            <section class="cv-section" id="publications">
+                <h2 class="section-title">
+                    <i class="fas fa-book"></i>
+                    <span class="lang-ko">학술 연구 및 논문 (Publications &amp; Academic Research)</span>
+                    <span class="lang-en">Publications &amp; Academic Research</span>
+                </h2>
+                <div class="timeline">
+                    
+                    <!-- Paper 1: J-KICS -->
+                    <article class="entry-item">
+                        <div class="entry-header">
+                            <div class="entry-main-info">
+                                <h3 class="entry-title">
+                                    <span class="lang-ko">Multi-Exit Faster R-CNN (MEF): 변동하는 자원에 적응적인 다중 출구 신경망</span>
+                                    <span class="lang-en">Multi-Exit Faster R-CNN (MEF): Adaptive Multi-Exit Neural Network for Fluctuating Computational Resources</span>
+                                </h3>
+                                <div class="entry-subtitle">
+                                    <span class="lang-ko">한국통신학회논문지 (J-KICS, SCOPUS) | <strong>공동 제1저자</strong></span>
+                                    <span class="lang-en">J-KICS Journal (SCOPUS Indexed) | <strong>Co-First Author</strong></span>
+                                </div>
+                            </div>
+                            <div class="entry-date">
+                                <span>2025.02</span>
+                                <div class="entry-location">Vol. 50, No. 2, pp. 234-244</div>
+                            </div>
+                        </div>
+                        <div class="entry-body">
+                            <ul class="entry-list lang-ko">
+                                <li>
+                                    <strong>연구 배경</strong>: IoT 및 엣지 환경에서 발생하는 컴퓨팅 자원의 실시간 변동성 속에서, 정확도와 지연시간(Latency) 간의 트레이드오프를 동적으로 제어할 수 없는 기존 단일 출구 모델의 한계 극복.
+                                </li>
+                                <li>
+                                    <strong>제안 방법</strong>: Faster R-CNN의 백본 네트워크에 조기 출구를 설계하고, 가상 큐(Virtual Queue)와 Drift-Plus-Penalty(DPP) 기반의 <strong>랴프노프 최적화(Lyapunov Optimization) 알고리즘</strong>을 적용하여 시스템 자원 상황에 맞는 최적의 출구를 실시간 결정.
+                                </li>
+                                <li>
+                                    <strong>연구 성과</strong>: PASCAL VOC 데이터셋에서 출구 0 (mAP 63.81%), 출구 1 (mAP 70.07%) 달성 및 자원 제약 상황에서 <strong>50% 이상의 지연시간 감소</strong>를 입증하며 SCOPUS 학술지에 정식 게재.
+                                </li>
+                                <li>
+                                    <strong>담당 역할</strong>: 랴프노프 최적화 알고리즘 설계 및 구현, 백본 조기 출구 구조 설계, GPU 클럭 제어를 통한 자원 변동 환경 시뮬레이션 및 논문 작성 주도.
+                                </li>
+                                <li>
+                                    <strong>DOI</strong>: <a href="https://doi.org/10.7840/kics.2025.50.2.234" target="_blank">10.7840/kics.2025.50.2.234</a>
+                                </li>
+                            </ul>
+                            <ul class="entry-list lang-en">
+                                <li>
+                                    <strong>Motivation</strong>: Addressed the fundamental latency-accuracy trade-off in IoT/edge systems where compute resources fluctuate dynamically and conventional single-exit object detectors incur heavy latency bottlenecks.
+                                </li>
+                                <li>
+                                    <strong>Methodology</strong>: Designed early exit branches within the Faster R-CNN backbone and formulated a dynamic exit-selection algorithm based on <strong>Lyapunov Optimization</strong> (Virtual Queue &amp; Drift-Plus-Penalty) to select optimal inference exits under varying computing constraints.
+                                </li>
+                                <li>
+                                    <strong>Results</strong>: Achieved mAP of 63.81% (Exit 0) and 70.07% (Exit 1) on PASCAL VOC, while demonstrating over <strong>50% latency reduction</strong> under resource constraints; successfully peer-reviewed and published in J-KICS (SCOPUS).
+                                </li>
+                                <li>
+                                    <strong>Role</strong>: Formulated and coded the Lyapunov exit-selection algorithm, designed the multi-exit backbone architecture, simulated fluctuating GPU clock environments, and led manuscript drafting.
+                                </li>
+                                <li>
+                                    <strong>DOI</strong>: <a href="https://doi.org/10.7840/kics.2025.50.2.234" target="_blank">10.7840/kics.2025.50.2.234</a>
+                                </li>
+                            </ul>
+                            <div class="tags-row">
+                                <span class="tech-tag">PyTorch</span>
+                                <span class="tech-tag">Faster R-CNN</span>
+                                <span class="tech-tag">Lyapunov Optimization</span>
+                                <span class="tech-tag">SCOPUS</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Paper 2: SSRN -->
+                    <article class="entry-item">
+                        <div class="entry-header">
+                            <div class="entry-main-info">
+                                <h3 class="entry-title">
+                                    <span class="lang-ko">다중 출구 신경망을 위한 동적 앙상블 전략</span>
+                                    <span class="lang-en">Dynamic Ensemble Strategy for Multi-Exit Neural Network</span>
+                                </h3>
+                                <div class="entry-subtitle">
+                                    <span class="lang-ko">SSRN Pre-print | <strong>주저자</strong></span>
+                                    <span class="lang-en">SSRN Pre-print | <strong>Lead Author</strong></span>
+                                </div>
+                            </div>
+                            <div class="entry-date">
+                                <span>2025.01</span>
+                            </div>
+                        </div>
+                        <div class="entry-body">
+                            <ul class="entry-list lang-ko">
+                                <li>
+                                    <strong>연구 내용</strong>: 다중 출구 신경망의 중간 계층 출구들을 특정 클래스에 특화된 약한 분류기(Weak Classifier)로 간주하고, 각 출구의 예측 엔트로피(Entropy)를 기반으로 불확실성을 정량화하여 신뢰도가 높은 출구들만을 적응적으로 결합하는 동적 앙상블 알고리즘 제안.
+                                </li>
+                                <li>
+                                    <strong>연구 성과</strong>: ResNet-101 및 Vision Transformer(ViT-B/16) 모델에서 정적 앙상블 대비 높은 연산 효율성을 유지하며, <strong>CIFAR-100에서 +1.66%p</strong>, <strong>ImageNet-1K에서 +0.61%p</strong>의 Top-1 정확도 향상 입증.
+                                </li>
+                                <li>
+                                    <strong>논문 링크</strong>: <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5123790" target="_blank">SSRN Paper (ID: 5123790)</a>
+                                </li>
+                            </ul>
+                            <ul class="entry-list lang-en">
+                                <li>
+                                    <strong>Research Scope</strong>: Conceptualized early exits within multi-exit networks as specialized weak classifiers, and developed an adaptive dynamic ensemble algorithm that quantifies prediction uncertainty via output entropy to selectively aggregate only high-confidence predictions.
+                                </li>
+                                <li>
+                                    <strong>Results</strong>: Demonstrated accuracy improvements of <strong>+1.66%p on CIFAR-100</strong> and <strong>+0.61%p on ImageNet-1K</strong> across ResNet-101 and Vision Transformer (ViT-B/16) architectures while outperforming static ensemble computation costs.
+                                </li>
+                                <li>
+                                    <strong>Paper Link</strong>: <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5123790" target="_blank">SSRN Paper (ID: 5123790)</a>
+                                </li>
+                            </ul>
+                            <div class="tags-row">
+                                <span class="tech-tag">Vision Transformer</span>
+                                <span class="tech-tag">ResNet-101</span>
+                                <span class="tech-tag">Dynamic Ensemble</span>
+                                <span class="tech-tag">Model Calibration</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Key Engineering Projects -->
+            <section class="cv-section" id="projects">
+                <h2 class="section-title">
+                    <i class="fas fa-layer-group"></i>
+                    <span class="lang-ko">주요 프로젝트 (Key Engineering Projects)</span>
+                    <span class="lang-en">Key Engineering Projects</span>
+                </h2>
+                <div class="timeline">
+                    
+                    <!-- AGV Project -->
+                    <article class="entry-item">
+                        <div class="entry-header">
+                            <div class="entry-main-info">
+                                <h3 class="entry-title">Edge-Cloud Hybrid AGV Control System</h3>
+                                <div class="entry-subtitle">
+                                    <span class="lang-ko">삼성청년SW아카데미(SSAFY) 11기 최종 프로젝트 | 팀 리더 &amp; 시스템 아키텍트</span>
+                                    <span class="lang-en">Samsung Software Academy for Youth (SSAFY) Final Project | Team Lead &amp; Architect</span>
+                                </div>
+                            </div>
+                            <div class="entry-date">
+                                <span>2024.04 – 2024.05</span>
+                            </div>
+                        </div>
+                        <div class="entry-body">
+                            <ul class="entry-list lang-ko">
+                                <li>
+                                    <strong>하이브리드 아키텍처 설계</strong>: 무인 운반차(AGV)의 모터 제어 및 센서 피드백 등 실시간 결정성이 요구되는 작업은 라즈베리 파이 엣지 노드에서 C++로 직접 처리하고, 전체 경로 플래닝 및 모니터링은 AWS EC2 클라우드로 분리.
+                                </li>
+                                <li>
+                                    <strong>통신 파이프라인</strong>: MQTT 프로토콜을 활용하여 엣지와 클라우드 간 초저지연 양방향 메시지 큐를 구축하고, 차량 주행 이력 및 배터리/위치 상태를 MySQL에 적재.
+                                </li>
+                                <li>
+                                    <strong>GitHub</strong>: <a href="https://github.com/GooDongWoo/AGVproject" target="_blank">github.com/GooDongWoo/AGVproject</a>
+                                </li>
+                            </ul>
+                            <ul class="entry-list lang-en">
+                                <li>
+                                    <strong>Hybrid Architecture</strong>: Separated deterministic real-time motor control and sensor feedback on edge nodes (Raspberry Pi, C++) from centralized telemetry, fleet path optimization, and remote control on AWS EC2 cloud.
+                                </li>
+                                <li>
+                                    <strong>Messaging Pipeline</strong>: Implemented an ultra-low latency bi-directional messaging pipeline via MQTT, storing mission telemetries, battery status, and location traces in MySQL.
+                                </li>
+                                <li>
+                                    <strong>GitHub</strong>: <a href="https://github.com/GooDongWoo/AGVproject" target="_blank">github.com/GooDongWoo/AGVproject</a>
+                                </li>
+                            </ul>
+                            <div class="tags-row">
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">Raspberry Pi</span>
+                                <span class="tech-tag">AWS EC2</span>
+                                <span class="tech-tag">MQTT</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- KHU Grade Alarm Extension -->
+                    <article class="entry-item">
+                        <div class="entry-header">
+                            <div class="entry-main-info">
+                                <h3 class="entry-title">
+                                    <span class="lang-ko">경희대학교 성적 확인 알리미 크롬 확장 프로그램</span>
+                                    <span class="lang-en">Kyung Hee Univ. Grade Alert Chrome Extension</span>
+                                </h3>
+                                <div class="entry-subtitle">
+                                    <span class="lang-ko">개인 프로젝트 | 개발자</span>
+                                    <span class="lang-en">Personal Project | Lead Developer</span>
+                                </div>
+                            </div>
+                            <div class="entry-date">
+                                <span>2024.06 – 2024.07</span>
+                            </div>
+                        </div>
+                        <div class="entry-body">
+                            <ul class="entry-list lang-ko">
+                                <li>
+                                    <strong>문제 해결</strong>: 학기말 성적 공시 기간 학생들의 반복적인 수동 로그인 불편을 해소하기 위해 자동 성적 스크래핑 및 푸시 알림 확장 프로그램 개발.
+                                </li>
+                                <li>
+                                    <strong>구현 기술</strong>: Chrome Storage API 기반의 안전한 세션 인증, Chrome Alarms API를 활용한 30분 주기 백그라운드 폴링, 정규표현식을 활용한 인트라넷 HTML 테이블 파싱 및 Chrome Notification 알림 트리거.
+                                </li>
+                                <li>
+                                    <strong>GitHub</strong>: <a href="https://github.com/GooDongWoo/kyunghee_score_alarm_chrome_extension" target="_blank">github.com/GooDongWoo/kyunghee_score_alarm_chrome_extension</a>
+                                </li>
+                            </ul>
+                            <ul class="entry-list lang-en">
+                                <li>
+                                    <strong>Problem &amp; Solution</strong>: Solved the burden of manual repetitive portal log-ins during university grade publication seasons by engineering an automated scraper and desktop alert extension.
+                                </li>
+                                <li>
+                                    <strong>Technical Implementation</strong>: Utilized Chrome Storage API for credential persistence, Chrome Alarms API for periodic 30-minute background checks, RegEx parsing of portal HTML tables, and Chrome Notification API for immediate alerts upon grade posting.
+                                </li>
+                                <li>
+                                    <strong>GitHub</strong>: <a href="https://github.com/GooDongWoo/kyunghee_score_alarm_chrome_extension" target="_blank">github.com/GooDongWoo/kyunghee_score_alarm_chrome_extension</a>
+                                </li>
+                            </ul>
+                            <div class="tags-row">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Chrome Extension API</span>
+                                <span class="tech-tag">Web Scraping</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- LG Aimers 5th -->
+                    <article class="entry-item">
+                        <div class="entry-header">
+                            <div class="entry-main-info">
+                                <h3 class="entry-title">
+                                    <span class="lang-ko">LG Aimers 5기 해커톤: 스마트 팩토리 불량 예측 모델</span>
+                                    <span class="lang-en">LG Aimers 5th Hackathon: Smart Factory Defect Prediction</span>
+                                </h3>
+                                <div class="entry-subtitle">
+                                    <span class="lang-ko">LG Aimers AI 전문가 과정 해커톤</span>
+                                    <span class="lang-en">LG Aimers AI Expert Track Hackathon</span>
+                                </div>
+                            </div>
+                            <div class="entry-date">
+                                <span>2024.08</span>
+                            </div>
+                        </div>
+                        <div class="entry-body">
+                            <ul class="entry-list lang-ko">
+                                <li>
+                                    <strong>극심한 불균형 데이터 처리</strong>: 제조 공정 데이터의 심각한 클래스 불균형 문제를 ENN(Edited Nearest Neighbours)과 SMOTE 기법을 결합하여 해결.
+                                </li>
+                                <li>
+                                    <strong>모델링 &amp; 성과</strong>: Dam Dispenser, AutoClave 등 세부 공정별 특화 모델을 구축하고 가중치 투표 기반 앙상블을 적용하여 <strong>베이스라인 대비 F1 Score 73.2% 향상</strong>(0.0975 → 0.16886) 달성.
+                                </li>
+                            </ul>
+                            <ul class="entry-list lang-en">
+                                <li>
+                                    <strong>Severe Class Imbalance Mitigation</strong>: Resolved severe real-world tabular data imbalance by pairing Edited Nearest Neighbours (ENN) with SMOTE oversampling.
+                                </li>
+                                <li>
+                                    <strong>Modeling &amp; Results</strong>: Developed dedicated sub-models for distinct fabrication phases (Dam Dispenser, AutoClave) and deployed weighted soft voting ensembles, achieving a <strong>+73.2% relative improvement in F1 Score</strong> (0.0975 to 0.16886) over baseline.
+                                </li>
+                            </ul>
+                            <div class="tags-row">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">XGBoost / Random Forest</span>
+                                <span class="tech-tag">SMOTE</span>
+                                <span class="tech-tag">Feature Engineering</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Linux System Programming -->
+                    <article class="entry-item">
+                        <div class="entry-header">
+                            <div class="entry-main-info">
+                                <h3 class="entry-title">
+                                    <span class="lang-ko">리눅스 시스템 프로그래밍 &amp; 멀티스레드 소켓 채팅 서버</span>
+                                    <span class="lang-en">Linux Systems Programming &amp; Multi-threaded Socket Chat Server</span>
+                                </h3>
+                                <div class="entry-subtitle">
+                                    <span class="lang-ko">경희대학교 컴퓨터공학과 프로젝트</span>
+                                    <span class="lang-en">Kyung Hee University CS Term Project</span>
+                                </div>
+                            </div>
+                            <div class="entry-date">
+                                <span>2024.03 – 2024.06</span>
+                            </div>
+                        </div>
+                        <div class="entry-body">
+                            <ul class="entry-list lang-ko">
+                                <li>
+                                    <strong>핵심 구현</strong>: POSIX 시스템 콜 기반의 파일 I/O, `fork()`/`exec()` 프로세스 제어, IPC(파이프, 메시지 큐, 공유 메모리), Mutex 기반 스레드 동기화 구현.
+                                </li>
+                                <li>
+                                    <strong>채팅 서버</strong>: TCP/IP 소켓 프로그래밍을 통해 다중 클라이언트의 동시 접속을 멀티스레딩으로 처리하고, 뮤텍스를 통한 데이터 레이스 방지 및 실시간 브로드캐스팅 구현.
+                                </li>
+                            </ul>
+                            <ul class="entry-list lang-en">
+                                <li>
+                                    <strong>Systems Engineering</strong>: Implemented low-level operating system primitives using POSIX APIs: file I/O, `fork()`/`exec()` process lifecycle management, IPC (pipes, message queues, shared memory), and mutex synchronization.
+                                </li>
+                                <li>
+                                    <strong>Concurrent Server</strong>: Architected a concurrent TCP/IP socket server in C handling multi-client sessions with POSIX threads, preventing race conditions via mutexes, and facilitating real-time broadcasting.
+                                </li>
+                            </ul>
+                            <div class="tags-row">
+                                <span class="tech-tag">C</span>
+                                <span class="tech-tag">Linux Kernel API</span>
+                                <span class="tech-tag">POSIX Threads</span>
+                                <span class="tech-tag">TCP/IP Sockets</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Honors & Awards -->
+            <section class="cv-section" id="awards">
+                <h2 class="section-title">
+                    <i class="fas fa-trophy"></i>
+                    <span class="lang-ko">수상 및 표창 (Honors &amp; Awards)</span>
+                    <span class="lang-en">Honors &amp; Awards</span>
+                </h2>
+                <div class="awards-grid">
+                    
+                    <div class="award-card">
+                        <i class="fas fa-award award-icon"></i>
+                        <div class="award-info">
+                            <h4>
+                                <span class="lang-ko">최우등 졸업 (총장상 / 우등상)</span>
+                                <span class="lang-en">Valedictorian (President's Award)</span>
+                            </h4>
+                            <p>
+                                <span class="lang-ko">경희대학교 전자정보대학 수석 졸업</span>
+                                <span class="lang-en">College of Electronics &amp; Information, Kyung Hee Univ.</span>
+                            </p>
+                            <span class="award-date">2025.02.19</span>
+                        </div>
+                    </div>
+
+                    <div class="award-card">
+                        <i class="fas fa-code award-icon"></i>
+                        <div class="award-info">
+                            <h4>
+                                <span class="lang-ko">2024 ICPC Asia Seoul Regional 본선 (Honorable Mention)</span>
+                                <span class="lang-en">2024 ICPC Asia Seoul Regional (Honorable Mention)</span>
+                            </h4>
+                            <p>
+                                <span class="lang-ko">전국 대학생 프로그래밍 경시대회 본선 43위 (팀명: nEwBiE)</span>
+                                <span class="lang-en">National Collegiate Programming Contest Finals (43rd Place)</span>
+                            </p>
+                            <span class="award-date">2024.11.23</span>
+                        </div>
+                    </div>
+
+                    <div class="award-card">
+                        <i class="fas fa-medal award-icon"></i>
+                        <div class="award-info">
+                            <h4>
+                                <span class="lang-ko">경희대학교 프로그래밍 경시대회 우수상 (2위)</span>
+                                <span class="lang-en">KHU Fall Programming Contest (2nd Place)</span>
+                            </h4>
+                            <p>
+                                <span class="lang-ko">주관: 경희대학교 SW중심대학사업단</span>
+                                <span class="lang-en">Organized by KHU Software Education Center</span>
+                            </p>
+                            <span class="award-date">2024.10.26</span>
+                        </div>
+                    </div>
+
+                    <div class="award-card">
+                        <i class="fas fa-file-alt award-icon"></i>
+                        <div class="award-info">
+                            <h4>
+                                <span class="lang-ko">학부연구생 학술제 최우수 포스터상</span>
+                                <span class="lang-en">Best Poster Award (1st Place)</span>
+                            </h4>
+                            <p>
+                                <span class="lang-ko">경희대학교 융합과 혁신 학술제 (교육혁신사업단)</span>
+                                <span class="lang-en">Undergraduate Research Festival, Kyung Hee University</span>
+                            </p>
+                            <span class="award-date">2024.12.05</span>
+                        </div>
+                    </div>
+
+                    <div class="award-card">
+                        <i class="fas fa-certificate award-icon"></i>
+                        <div class="award-info">
+                            <h4>
+                                <span class="lang-ko">교수학습개발원 학습후기 공모전 장려상</span>
+                                <span class="lang-en">CTL Learning Experience Award</span>
+                            </h4>
+                            <p>
+                                <span class="lang-ko">경희대학교 교수학습개발원</span>
+                                <span class="lang-en">Center for Teaching &amp; Learning, Kyung Hee Univ.</span>
+                            </p>
+                            <span class="award-date">2024.08</span>
+                        </div>
+                    </div>
+
+                    <div class="award-card">
+                        <i class="fas fa-microchip award-icon"></i>
+                        <div class="award-info">
+                            <h4>
+                                <span class="lang-ko">PID 라인트레이서 자율주행 경진대회 1등</span>
+                                <span class="lang-en">PID Line Tracer Competition (1st Place)</span>
+                            </h4>
+                            <p>
+                                <span class="lang-ko">경희대학교 전자공학과 주관</span>
+                                <span class="lang-en">Department of Electronic Engineering, KHU</span>
+                            </p>
+                            <span class="award-date">2022.12</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Certifications & Languages -->
+            <section class="cv-section" id="certifications">
+                <h2 class="section-title">
+                    <i class="fas fa-certificate"></i>
+                    <span class="lang-ko">자격증 및 공인 어학 (Certifications &amp; Languages)</span>
+                    <span class="lang-en">Certifications &amp; Languages</span>
+                </h2>
+                <div class="awards-grid">
+                    
+                    <div class="award-card">
+                        <i class="fas fa-check-circle award-icon" style="color: #10b981;"></i>
+                        <div class="award-info">
+                            <h4>
+                                <span class="lang-ko">정보처리기사</span>
+                                <span class="lang-en">Engineer Information Processing</span>
+                            </h4>
+                            <p>
+                                <span class="lang-ko">한국산업인력공단 (국가기술자격)</span>
+                                <span class="lang-en">Human Resources Development Service of Korea</span>
+                            </p>
+                            <span class="award-date">National Certification</span>
+                        </div>
+                    </div>
+
+                    <div class="award-card">
+                        <i class="fas fa-chart-pie award-icon" style="color: #10b981;"></i>
+                        <div class="award-info">
+                            <h4>
+                                <span class="lang-ko">빅데이터분석기사</span>
+                                <span class="lang-en">Big Data Analytics Engineer</span>
+                            </h4>
+                            <p>
+                                <span class="lang-ko">한국데이터산업진흥원 (국가기술자격)</span>
+                                <span class="lang-en">Korea Data Agency</span>
+                            </p>
+                            <span class="award-date">National Certification</span>
+                        </div>
+                    </div>
+
+                    <div class="award-card">
+                        <i class="fas fa-language award-icon" style="color: #6366f1;"></i>
+                        <div class="award-info">
+                            <h4>
+                                <span class="lang-ko">OPIc IH (Intermediate High)</span>
+                                <span class="lang-en">OPIc IH (Intermediate High)</span>
+                            </h4>
+                            <p>
+                                <span class="lang-ko">ACTFL 공인 영어 말하기 시험</span>
+                                <span class="lang-en">ACTFL Certified Spoken English</span>
+                            </p>
+                            <span class="award-date">2025.03</span>
+                        </div>
+                    </div>
+
+                    <div class="award-card">
+                        <i class="fas fa-desktop award-icon" style="color: #3b82f6;"></i>
+                        <div class="award-info">
+                            <h4>
+                                <span class="lang-ko">컴퓨터활용능력 1급 &amp; 워드프로세서</span>
+                                <span class="lang-en">Computer Specialist Level 1 &amp; Word Processor</span>
+                            </h4>
+                            <p>
+                                <span class="lang-ko">대한상공회의소 (국가기술/공인)</span>
+                                <span class="lang-en">Korea Chamber of Commerce and Industry</span>
+                            </p>
+                            <span class="award-date">Certified</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Technical Skills -->
+            <section class="cv-section" id="skills">
+                <h2 class="section-title">
+                    <i class="fas fa-tools"></i>
+                    <span class="lang-ko">기술 역량 (Technical Skills)</span>
+                    <span class="lang-en">Technical Skills</span>
+                </h2>
+                <div class="skills-container">
+                    
+                    <div class="skill-category-card">
+                        <h3 class="skill-category-title">
+                            <i class="fas fa-code"></i>
+                            <span class="lang-ko">프로그래밍 언어</span>
+                            <span class="lang-en">Programming Languages</span>
+                        </h3>
+                        <div class="skill-list-items">
+                            <span class="tech-tag">C++ (Modern C++17)</span>
+                            <span class="tech-tag">Python (Advanced)</span>
+                            <span class="tech-tag">C# (.NET)</span>
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">JavaScript (ES6+)</span>
+                            <span class="tech-tag">SQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <h3 class="skill-category-title">
+                            <i class="fas fa-brain"></i>
+                            <span class="lang-ko">인공지능 &amp; 데이터 사이언스</span>
+                            <span class="lang-en">AI &amp; Data Science</span>
+                        </h3>
+                        <div class="skill-list-items">
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">scikit-learn</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Vision Transformer</span>
+                            <span class="tech-tag">Faster R-CNN</span>
+                            <span class="tech-tag">Pandas / NumPy</span>
+                            <span class="tech-tag">DDP (분산 학습)</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <h3 class="skill-category-title">
+                            <i class="fas fa-server"></i>
+                            <span class="lang-ko">시스템, 인프라 &amp; CI/CD</span>
+                            <span class="lang-en">Systems &amp; CI/CD</span>
+                        </h3>
+                        <div class="skill-list-items">
+                            <span class="tech-tag">Linux (Kernel / POSIX)</span>
+                            <span class="tech-tag">Multi-threading / IPC</span>
+                            <span class="tech-tag">Velopack CI/CD</span>
+                            <span class="tech-tag">Git / GitHub Actions</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">AWS (EC2)</span>
+                            <span class="tech-tag">SQLite / MySQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <h3 class="skill-category-title">
+                            <i class="fas fa-network-wired"></i>
+                            <span class="lang-ko">네트워크 프로토콜 &amp; 임베디드</span>
+                            <span class="lang-en">Protocols &amp; Embedded</span>
+                        </h3>
+                        <div class="skill-list-items">
+                            <span class="tech-tag">TCP/IP Socket</span>
+                            <span class="tech-tag">MQTT</span>
+                            <span class="tech-tag">Raspberry Pi</span>
+                            <span class="tech-tag">Arduino / ESP32</span>
+                            <span class="tech-tag">PID 제어 이론</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- CV Footer -->
+            <footer class="cv-footer">
+                <p>Curriculum Vitae &copy; 2026 DongWoo Goo (구동우). Last updated in September 2026.</p>
+                <p style="margin-top: 0.35rem;">
+                    Hosted on <a href="https://GooDongWoo.github.io" target="_blank">GooDongWoo.github.io</a> · 
+                    Source code on <a href="https://github.com/GooDongWoo" target="_blank">GitHub</a>
+                </p>
+            </footer>
+
+        </div>
+    </main>
+
+    <!-- Interactive Script -->
+    <script src="../assets/js/cv.js"></script>
+</body>
+</html>

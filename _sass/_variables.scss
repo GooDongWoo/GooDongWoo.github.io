@@ -34,8 +34,8 @@
 
   --text-font: Times, "Times New Roman", "Free Serif", "Noto Serif", TimesNewRomanPSMT, "Droid Serif";
 
-  --link-color: var(--blue);
-  --link-hover-color: #1c7ed6;
+  --link-color: var(--gray-900);
+  --link-hover-color: #000000;
 
   --heading-color: var(--gray-900);
 
@@ -43,8 +43,8 @@
   --border-radius: .25rem;
 
   --code-font: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --code-color: var(--grape);
-  --code-bg: #fbf1c7;
+  --code-color: var(--gray-900);
+  --code-bg: var(--gray-100);
 
   --spacer: 1rem;
   --spacer-2: calc(var(--spacer) * 1.5);
@@ -58,12 +58,13 @@
 
     --heading-color: #fff;
 
-    --link-color: var(--blue-300);
-    --link-hover-color: var(--blue-400);
+    --link-color: #ffffff;
+    --link-hover-color: var(--gray-400);
 
     --border-color: rgba(255,255,255,.15);
 
-    --code-bg: #282828;
+    --code-color: #f1f3f5;
+    --code-bg: #1f1f1f;
   }
 }
 

@@ -2,26 +2,26 @@
    CSS Variables
    =================================== */
 :root {
-    /* Colors */
-    --primary-color: #6366f1;
-    --primary-dark: #4f46e5;
-    --primary-light: #818cf8;
-    --secondary-color: #ec4899;
-    --secondary-dark: #db2777;
-    --accent-color: #8b5cf6;
+    /* Colors (Monochrome: Black, Gray, White Only) */
+    --primary-color: #111827;
+    --primary-dark: #000000;
+    --primary-light: #4b5563;
+    --secondary-color: #4b5563;
+    --secondary-dark: #1f2937;
+    --accent-color: #111827;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
-    --gradient-secondary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --gradient-overlay: linear-gradient(135deg, rgba(99, 102, 241, 0.9), rgba(236, 72, 153, 0.9));
+    /* Gradients (Monochrome) */
+    --gradient-primary: linear-gradient(135deg, #111827 0%, #374151 100%);
+    --gradient-secondary: linear-gradient(135deg, #1f2937 0%, #4b5563 100%);
+    --gradient-overlay: rgba(0, 0, 0, 0.75);
 
     /* Neutral Colors */
     --bg-primary: #ffffff;
     --bg-secondary: #f9fafb;
     --bg-tertiary: #f3f4f6;
-    --text-primary: #1f2937;
-    --text-secondary: #6b7280;
-    --text-muted: #9ca3af;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #6b7280;
     --border-color: #e5e7eb;
 
     /* Spacing */
@@ -36,10 +36,10 @@
 
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
 
     /* Font */
     --font-primary: 'Inter', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -48,13 +48,24 @@
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg-primary: #111827;
-        --bg-secondary: #1f2937;
-        --bg-tertiary: #374151;
-        --text-primary: #f9fafb;
-        --text-secondary: #d1d5db;
-        --text-muted: #9ca3af;
-        --border-color: #374151;
+        --primary-color: #ffffff;
+        --primary-dark: #e5e5e5;
+        --primary-light: #9ca3af;
+        --secondary-color: #d1d5db;
+        --secondary-dark: #9ca3af;
+        --accent-color: #ffffff;
+
+        --gradient-primary: linear-gradient(135deg, #ffffff 0%, #d4d4d4 100%);
+        --gradient-secondary: linear-gradient(135deg, #d4d4d4 0%, #9ca3af 100%);
+        --gradient-overlay: rgba(0, 0, 0, 0.85);
+
+        --bg-primary: #0a0a0a;
+        --bg-secondary: #141414;
+        --bg-tertiary: #1f1f1f;
+        --text-primary: #ffffff;
+        --text-secondary: #d4d4d4;
+        --text-muted: #888888;
+        --border-color: #262626;
     }
 }
 
@@ -196,7 +207,7 @@ button {
 .btn-outline:hover {
     border-color: var(--primary-color);
     color: var(--primary-color);
-    background: rgba(99, 102, 241, 0.05);
+    background: rgba(0, 0, 0, 0.04);
 }
 
 /* Tags */
@@ -345,7 +356,6 @@ button {
     font-size: 1.125rem;
     color: var(--text-secondary);
     margin-bottom: 16px;
-    animation: fadeInUp 0.6s ease;
 }
 
 .hero-title {
@@ -353,7 +363,6 @@ button {
     font-weight: 900;
     line-height: 1.2;
     margin-bottom: 24px;
-    animation: fadeInUp 0.6s ease 0.1s backwards;
 }
 
 .hero-description {
@@ -361,37 +370,18 @@ button {
     color: var(--text-secondary);
     line-height: 1.8;
     margin-bottom: 32px;
-    animation: fadeInUp 0.6s ease 0.2s backwards;
 }
 
 .hero-buttons {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
-    animation: fadeInUp 0.6s ease 0.3s backwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Hero Image */
 .hero-image {
     display: flex;
     justify-content: center;
-    animation: fadeIn 0.8s ease 0.4s backwards;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
 }
 
 .profile-card {
@@ -414,19 +404,13 @@ button {
 
 .profile-ring {
     position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
     border-radius: 50%;
-    background: var(--gradient-primary);
-    opacity: 0.3;
-    animation: pulse 3s ease infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 0.3; }
-    50% { transform: scale(1.05); opacity: 0.5; }
+    border: 2px solid var(--border-color);
+    opacity: 0.6;
 }
 
 .status-badge {
@@ -438,8 +422,9 @@ button {
     gap: 8px;
     padding: 8px 16px;
     background: var(--bg-primary);
+    border: 1px solid var(--border-color);
     border-radius: 20px;
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-md);
     font-size: 0.875rem;
     font-weight: 600;
 }
@@ -447,14 +432,8 @@ button {
 .status-dot {
     width: 8px;
     height: 8px;
-    background: #10b981;
+    background: var(--text-primary);
     border-radius: 50%;
-    animation: blink 2s ease infinite;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
 }
 
 /* Scroll Indicator */
@@ -953,14 +932,7 @@ button {
 }
 
 .footer-tagline i {
-    color: #ef4444;
-    animation: heartbeat 1.5s ease infinite;
-}
-
-@keyframes heartbeat {
-    0%, 100% { transform: scale(1); }
-    10%, 30% { transform: scale(1.1); }
-    20%, 40% { transform: scale(1); }
+    color: var(--text-muted);
 }
 
 /* ===================================
@@ -1124,12 +1096,6 @@ button {
    Animations on Scroll
    =================================== */
 [data-animate] {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
-}
-
-[data-animate].animated {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
 }
