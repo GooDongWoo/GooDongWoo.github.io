@@ -5,9 +5,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="{{ '/assets/css/site-shell.css' | relative_url }}">
-  {% unless page.standalone_style %}<link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">{% endunless %}
-  {% if page.stylesheet %}<link rel="stylesheet" href="{{ page.stylesheet | relative_url }}">{% endif %}
+  {% assign asset_version = site.github.build_revision %}
+  {% unless asset_version %}{% assign asset_version = site.time | date: '%s' %}{% endunless %}
+  <link rel="stylesheet" href="{{ '/assets/css/site-shell.css' | relative_url }}?v={{ asset_version }}">
+  {% unless page.standalone_style %}<link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}?v={{ asset_version }}">{% endunless %}
+  {% if page.stylesheet %}<link rel="stylesheet" href="{{ page.stylesheet | relative_url }}?v={{ asset_version }}">{% endif %}
 
   {%- seo -%}
   {%- feed_meta -%}

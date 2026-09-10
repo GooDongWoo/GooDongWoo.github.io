@@ -40,6 +40,9 @@ Assert-True ($defaultLayout.Contains('{% include site-header.html %}')) 'Default
 Assert-True ($defaultLayout.Contains('{% include site-footer.html %}')) 'Default layout must use the shared site footer.'
 Assert-True (-not $defaultLayout.Contains('sidebar-left')) 'Default layout must not use the legacy left sidebar.'
 
+$sharedHead = Read-RepoFile '_includes/head.html'
+Assert-True ($sharedHead.Contains('asset_version')) 'Shared head must version static assets to prevent stale CSS.'
+
 $homePage = Read-RepoFile 'index.html'
 Assert-True ($homePage.StartsWith("---`n")) 'Home must contain Jekyll front matter.'
 Assert-True ($homePage.Contains('{% include site-header.html %}')) 'Home must use the shared site header.'
