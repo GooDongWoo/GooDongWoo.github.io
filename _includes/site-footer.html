@@ -1,0 +1,14 @@
+<footer class="site-footer" id="footer-contact">
+  <div class="site-footer-inner">
+    <div>
+      <strong>{{ site.data.profile.name_en }} <span>{{ site.data.profile.name_ko }}</span></strong>
+      <p>{{ site.data.profile.tagline }}</p>
+    </div>
+    <div class="site-footer-links" aria-label="연락처와 외부 프로필">
+      <a href="mailto:{{ site.data.profile.email }}">Email</a>
+      <a href="{{ site.data.profile.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="{{ site.data.profile.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+    <small>&copy; {{ site.time | date: '%Y' }} {{ site.data.profile.name }}. Built with Jekyll.</small>
+  </div>
+</footer>

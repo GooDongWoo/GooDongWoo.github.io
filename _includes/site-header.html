@@ -1,0 +1,20 @@
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.data.profile.name }} 홈">
+      {{ site.data.profile.name }}
+    </a>
+    <button class="site-nav-toggle" id="siteNavToggle" type="button" aria-controls="siteNav" aria-expanded="false">
+      <span class="sr-only">메뉴 열기</span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+    <nav class="site-nav" id="siteNav" aria-label="소프트웨어 엔지니어와 AI 연구자의 개인 포트폴리오 및 기술 블로그">
+      {% for item in site.data.navigation %}
+        {% assign item_path = item.url | split: '#' | first %}
+        <a href="{{ item.url | relative_url }}" data-nav-path="{{ item_path | relative_url }}">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
+

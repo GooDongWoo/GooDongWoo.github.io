@@ -1,48 +1,19 @@
-// Archive
-//
-// Styles for archive pages.
-
-.taxonomies-wrapper {
-  margin-top: var(--spacer-2);
-  margin-bottom: var(--spacer-2);
-}
-
-.taxonomies {
-  list-style: none;
-  display: grid;
-  grid-column-gap: 2em;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
-
-  .taxonomy {
-    display: flex;
-    padding: 0.25em 0;
-    justify-content: space-between;
-    color: inherit;
-    text-decoration: none;
-    border-bottom: 1px solid;
-    margin-bottom: var(--spacer);
-  }
-}
-
-.post-list-by-taxonomy {
-  time {
-    font-family: var(--code-font);
-  }
-}
-
-.back-to-top {
-  display: block;
-  font-size: 0.8em;
-  text-transform: uppercase;
-  text-align: right;
-  text-decoration: none;
-}
+.archive-intro { margin-bottom: 2.5rem; }
+.archive-intro h1 { margin: 0 0 0.6rem; font-size: clamp(2.2rem, 7vw, 3.5rem); }
+.archive-intro p,
+.archive-empty p { color: var(--gray-600); }
+.archive-empty { padding: 2rem; border: 1px solid var(--border-color); border-radius: 0.75rem; }
+.archive-empty p { margin: 0.4rem 0 0; }
+.taxonomies-wrapper { margin: var(--spacer-2) 0 var(--spacer-3); }
+.taxonomies { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; margin: 0; padding: 0; }
+.taxonomy { display: flex; justify-content: space-between; padding: 0.75rem 0.9rem; border: 1px solid var(--border-color); border-radius: 0.55rem; color: inherit; font-weight: 700; text-decoration: none; }
+.post-list-by-taxonomy { list-style: none; padding: 0; }
+.post-list-by-taxonomy li { display: flex; gap: 1rem; padding: 0.8rem 0; border-bottom: 1px solid var(--border-color); }
+.post-list-by-taxonomy time { flex: 0 0 auto; color: var(--gray-600); font-family: var(--code-font); }
+.archive-back { display: inline-block; margin-top: 1rem; font-size: 0.85rem; }
 
 @media (max-width: $sm-width) {
-  .taxonomies {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .taxonomies { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .post-list-by-taxonomy li { display: block; }
+  .post-list-by-taxonomy time { display: block; margin-bottom: 0.25rem; }
 }

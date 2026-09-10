@@ -1,0 +1,26 @@
+name: Jekyll build
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+          bundler-cache: true
+      - name: Build site
+        run: bundle exec jekyll build
+      - name: Check site structure
+        shell: pwsh
+        run: ./tests/site-structure.ps1
+      - name: Check navigation behavior
+        run: node --test tests/site-shell.test.js

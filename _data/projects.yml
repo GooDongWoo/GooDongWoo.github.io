@@ -1,0 +1,28 @@
+- title: Multi-Exit Faster R-CNN (MEF)
+  description: 자원 변동 환경에서 지연시간과 정확도를 동적으로 조절하는 다중 출구 객체 탐지 모델입니다. PASCAL VOC에서 지연시간을 50% 이상 줄였으며 J-KICS에 공동 1저자로 게재했습니다.
+  tags: [J-KICS SCOPUS, PyTorch, Faster R-CNN]
+  url: https://doi.org/10.7840/kics.2025.50.2.234
+  link_label: 논문 보기
+  icon: fas fa-external-link-alt
+
+- title: 진단기기 테스트 인터페이스 개발
+  description: 의료 진단기기 테스트 인터페이스와 통신 미들웨어를 개발하며 신뢰성 높은 장비 연동과 테스트 자동화를 수행하고 있습니다.
+  tags: [Samsung Medison, C#, Python, TCP/IP]
+  url: /cv/#experience
+  link_label: 경력 상세
+  icon: fas fa-info-circle
+
+- title: 다중 출구 신경망 동적 앙상블
+  description: 엔트로피 기반 불확실성으로 신뢰도 높은 중간 출구를 선택해 앙상블하는 기법입니다. CIFAR-100과 ImageNet-1K에서 성능 향상을 확인했습니다.
+  tags: [SSRN, Vision Transformer, ResNet-101]
+  url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5123790
+  link_label: SSRN 논문
+  icon: fas fa-file-pdf
+
+- title: Edge-Cloud Hybrid AGV 제어 시스템
+  description: 실시간 정밀 제어는 라즈베리 파이 엣지에서, 경로 모니터링과 분석은 AWS에서 수행하는 하이브리드 IoT 아키텍처를 설계하고 구현했습니다.
+  tags: [SSAFY, C++, Raspberry Pi, AWS EC2]
+  url: https://github.com/GooDongWoo/AGVproject
+  link_label: GitHub 저장소
+  icon: fab fa-github
+

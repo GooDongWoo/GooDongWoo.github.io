@@ -3,44 +3,11 @@ layout: default
 ---
 
 {% include home-header.html %}
-
-<h1>{{ page.title }}</h1>
-
-{%- assign taxonomies = site.posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
-
-<div class="taxonomies-wrapper">
-  <ul class="taxonomies">
-    {%- for taxonomy in taxonomies -%}
-      <li>
-        {%- capture link -%}{{ page.permalink }}#{{ taxonomy.name }}{%- endcapture -%}
-        <a class="taxonomy" href="{{ link | relative_url }}">
-            <span>{{ taxonomy.name }}</span>
-            <span class="taxonomy-count">{{ taxonomy.size }}</span>
-        </a> 
-      </li>
-    {%- endfor -%}
-  </ul>
-</div>
-
-{% comment %} Show posts by taxonomy {% endcomment %}
-{%- for taxonomy in taxonomies -%}
-  <h2 id="{{ taxonomy.name }}">
-    {{ taxonomy.name }}
-  </h2>
-  <ul class="post-list-by-taxonomy">
-    {%- assign posts = taxonomy.items -%}
-    {%- for post in posts -%}
-      <li>
-        <time datetime="{{ page.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time> &raquo; <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-      </li>
-    {%- endfor -%}
-  </ul>
-  <a href="#" onclick="backToTop()" class="back-to-top">Top &#8648;</a>
-{%- endfor -%}
-
-<script>
-  function backToTop() {
-    const main = document.getElementById("site-main");
-    main.scrollTop = 0;
-  }
-</script>
+<header class="archive-intro"><h1>{{ page.title }}</h1><p>작성한 기술 글을 연도별로 모았습니다.</p></header>
+{% assign taxonomies = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% if site.posts.size == 0 %}
+  <div class="archive-empty"><strong>첫 기술 글을 준비하고 있습니다.</strong><p>새 글이 발행되면 이곳에 연도별로 정리됩니다.</p></div>
+{% else %}
+  <ul class="taxonomies">{% for taxonomy in taxonomies %}<li><a class="taxonomy" href="#year-{{ taxonomy.name }}"><span>{{ taxonomy.name }}</span><span>{{ taxonomy.size }}</span></a></li>{% endfor %}</ul>
+  {% for taxonomy in taxonomies %}<section aria-labelledby="year-{{ taxonomy.name }}"><h2 id="year-{{ taxonomy.name }}">{{ taxonomy.name }}</h2><ul class="post-list-by-taxonomy">{% for post in taxonomy.items %}<li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y-%m-%d' }}</time><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>{% endfor %}</ul><a class="archive-back" href="#site-main">맨 위로 ↑</a></section>{% endfor %}
+{% endif %}

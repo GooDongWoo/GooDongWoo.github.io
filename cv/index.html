@@ -1,43 +1,18 @@
-<!DOCTYPE html>
+---
+layout: null
+title: Curriculum Vitae | DongWoo Goo
+description: 구동우의 소프트웨어 엔지니어 및 AI 연구자 경력과 프로젝트
+stylesheet: /assets/css/cv.css
+standalone_style: true
+---
+<!doctype html>
 <html lang="en" data-theme="light" data-lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DongWoo Goo (구동우) - SW Engineer & AI Researcher Curriculum Vitae (CV) / Resume">
-    <meta name="author" content="DongWoo Goo">
-    <title>Curriculum Vitae | DongWoo Goo (구동우)</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="../assets/css/cv.css">
-
-    <!-- html2pdf.js for direct client-side PDF export -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-</head>
-<body>
+{% include head.html %}
+<body class="cv-page">
+    {% include site-header.html %}
 
     <!-- Sticky Action Toolbar (Hidden on Print) -->
     <header class="cv-toolbar">
-        <div class="toolbar-left">
-            <a href="../" class="btn-tool" title="블로그 메인으로 이동 / Return to Blog">
-                <i class="fas fa-arrow-left"></i>
-                <span class="lang-ko">홈으로</span>
-                <span class="lang-en">Home</span>
-            </a>
-            <a href="../dates/" class="btn-tool" title="블로그 게시글 목록 / Blog Archive">
-                <i class="fas fa-book-open"></i>
-                <span class="lang-ko">블로그</span>
-                <span class="lang-en">Blog</span>
-            </a>
-        </div>
-
         <div class="toolbar-right">
             <!-- Language Selector (EN / KO) - Default: EN -->
             <div class="lang-switch-group" role="group" aria-label="Language Selector">
@@ -79,7 +54,7 @@
             <!-- Header Section -->
             <section class="cv-header">
                 <div class="header-avatar">
-                    <img src="../avatar.jpeg" alt="구동우 프로필 사진 / DongWoo Goo">
+                    <img src="{{ site.data.profile.avatar | relative_url }}" alt="구동우 프로필 사진 / DongWoo Goo">
                 </div>
                 <div class="header-info">
                     <div class="header-title-row">
@@ -108,7 +83,7 @@
                     <div class="contact-list">
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <a href="mailto:wendy1301@naver.com">wendy1301@naver.com</a>
+                            <a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a>
                         </div>
                         <div class="contact-item">
                             <i class="fab fa-github"></i>
@@ -819,17 +794,15 @@
 
             <!-- CV Footer -->
             <footer class="cv-footer">
-                <p>Curriculum Vitae &copy; 2026 DongWoo Goo (구동우). Last updated in September 2026.</p>
-                <p style="margin-top: 0.35rem;">
-                    Hosted on <a href="https://GooDongWoo.github.io" target="_blank">GooDongWoo.github.io</a> · 
-                    Source code on <a href="https://github.com/GooDongWoo" target="_blank">GitHub</a>
-                </p>
+                <p>Curriculum Vitae · Last updated in September 2026.</p>
             </footer>
 
         </div>
     </main>
 
-    <!-- Interactive Script -->
-    <script src="../assets/js/cv.js"></script>
+    {% include site-footer.html %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="{{ '/assets/js/site-shell.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/cv.js' | relative_url }}"></script>
 </body>
 </html>

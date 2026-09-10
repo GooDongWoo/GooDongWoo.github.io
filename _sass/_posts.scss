@@ -10,7 +10,7 @@
 
 .page,
 .post {
-  font-family: var(--text-font);
+  font-family: var(--body-font);
   margin-bottom: 4em;
 
   h1, h2, h3, h4, h5, h6, .post-meta {
@@ -21,6 +21,12 @@
     margin-top: .25rem;
   }
 }
+
+.page > p,
+.post > p,
+.post > ul,
+.post > ol,
+.post > blockquote { line-height: 1.85; }
 
 // Blog post or page title
 .page-title,

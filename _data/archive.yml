@@ -1,9 +1,9 @@
 - type: dates
-  title: Dates
+  title: 전체 글
   url: /dates/
 #- type: categories
-#  title: Categories
+#  title: 카테고리
 #  url: /categories/
 - type: tags
-  title: Tags
+  title: 태그
   url: /tags/

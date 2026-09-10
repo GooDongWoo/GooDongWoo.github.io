@@ -1,12 +1,8 @@
 - title: 홈
   url: /
-- title: CV
-  url: /cv/
+- title: 프로젝트
+  url: /#projects
 - title: 블로그
   url: /dates/
-- title: 카테고리
-  url: /categories/
-- title: 태그
-  url: /tags/
-- title: 소개
-  url: /about/
+- title: CV
+  url: /cv/

@@ -1,77 +1,29 @@
-// Layout
-//
-// Styles for managing the structural hierarchy of the site.
-
-.container {
-  padding: 0;
-  margin: 0;
+.page-shell {
+  width: min(calc(100% - 3rem), 1120px);
+  min-height: calc(100vh - 250px);
+  margin: 0 auto;
+  padding: clamp(3rem, 7vw, 6rem) 0;
+  display: grid;
+  grid-template-columns: minmax(0, 760px) minmax(190px, 1fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  justify-content: center;
 }
+.content-main,
+.content-toc { min-width: 0; }
 
-.home-header {
-  margin-top: -1em;
-  margin-bottom: var(--spacer-3);
-}
-
-.content {
-  padding-top: var(--spacer-2);
-  padding-left: var(--spacer-2);
-  padding-right: var(--spacer-2);
-  margin-left:  auto;
-  margin-right: auto;
-  min-height: 100vh;
-}
-
-.sidebar-left {
-  display: flex;
-  padding: var(--spacer);
-  background: center / cover;
-  height: 100vh;
-}
-
-footer {
-  margin-top: var(--spacer-3);
-  margin-bottom: var(--spacer-3);
-}
-
-@media (min-width: $md-width) {
-  .content {
-    padding-top: var(--spacer-3);
-    padding-left: var(--spacer-3);
-    padding-right: var(--spacer-3);
-    margin-left: 25%;
-  }
-
-  .sidebar-left {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-  }
-
-  .home-header {
-    margin-top: -2em;
-  }
-}
-
-@media (min-width: $lg-width) {
-  .sidebar-right {
-    display: block;
-  }
+.content-page:not(:has(.content-toc)) .page-shell {
+  display: block;
+  max-width: 760px;
 }
 
 @media (max-width: $lg-width) {
-  .sidebar-right {
-    display: none;
-  }
+  .page-shell { display: block; max-width: 760px; }
+  .content-toc { display: none; }
 }
 
-@media (max-width: $md-width) {
-  .content {
-    width: 100%;
-  }
-}
-
-@media (min-width: $md-width) and (max-width: $lg-width) {
-  .content {
-    width: 75%;
+@media (max-width: $sm-width) {
+  .page-shell {
+    width: min(calc(100% - 2rem), 760px);
+    padding: 2.5rem 0 4rem;
   }
 }
