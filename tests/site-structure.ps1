@@ -2,6 +2,7 @@ $ErrorActionPreference = 'Stop'
 
 $repoRoot = Split-Path -Parent $PSScriptRoot
 $failures = [System.Collections.Generic.List[string]]::new()
+$sourceExclusionPattern = '[\\/]\.git[\\/]|Gemfile\.lock$|[\\/]docs[\\/]superpowers[\\/]|[\\/]tests[\\/]'
 
 function Assert-True {
     param([bool]$Condition, [string]$Message)
@@ -12,6 +13,10 @@ function Read-RepoFile {
     param([string]$Path)
     return Get-Content -Raw (Join-Path $repoRoot $Path)
 }
+
+Assert-True ('C:\repo\.git\objects\file' -match $sourceExclusionPattern) 'Source filter must exclude Windows .git paths.'
+Assert-True ('/repo/.git/objects/file' -match $sourceExclusionPattern) 'Source filter must exclude POSIX .git paths.'
+Assert-True ('/repo/tests/site-structure.ps1' -match $sourceExclusionPattern) 'Source filter must exclude POSIX test paths.'
 
 $requiredFiles = @(
     '_data/profile.yml',
@@ -57,7 +62,7 @@ $portfolioStyles = Read-RepoFile 'assets/css/portfolio.css'
 Assert-True ($portfolioStyles.Contains('word-break: keep-all')) 'Korean hero copy must wrap by word instead of syllable.'
 
 $allSource = Get-ChildItem $repoRoot -Recurse -File |
-    Where-Object { $_.FullName -notmatch '\\.git\\|Gemfile\.lock$|docs\\superpowers\\|tests\\' } |
+    Where-Object { $_.FullName -notmatch $sourceExclusionPattern } |
     ForEach-Object { Get-Content -Raw $_.FullName -ErrorAction SilentlyContinue }
 $joinedSource = $allSource -join "`n"
 Assert-True (-not $joinedSource.Contains('Welcome to Not Pure Poole')) 'Upstream demo post is still present.'
