@@ -54,8 +54,9 @@ body.portfolio-page {
 .hero h1 {
   max-width: 760px;
   margin-bottom: 1.5rem;
-  font: 800 clamp(2.55rem, 6vw, 5rem)/1.1 Inter, "Noto Sans KR", sans-serif;
+  font: 800 clamp(2.55rem, 5.2vw, 4.25rem)/1.12 Inter, "Noto Sans KR", sans-serif;
   letter-spacing: -0.055em;
+  word-break: keep-all;
 }
 
 .hero h1 span { color: var(--shell-muted); }

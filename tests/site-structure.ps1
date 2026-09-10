@@ -53,6 +53,9 @@ foreach ($obsolete in @('createParticles', 'contactForm', 'lazyImages', 'createD
     Assert-True (-not $portfolioScript.Contains($obsolete)) "Portfolio script still contains obsolete feature: $obsolete"
 }
 
+$portfolioStyles = Read-RepoFile 'assets/css/portfolio.css'
+Assert-True ($portfolioStyles.Contains('word-break: keep-all')) 'Korean hero copy must wrap by word instead of syllable.'
+
 $allSource = Get-ChildItem $repoRoot -Recurse -File |
     Where-Object { $_.FullName -notmatch '\\.git\\|Gemfile\.lock$|docs\\superpowers\\|tests\\' } |
     ForEach-Object { Get-Content -Raw $_.FullName -ErrorAction SilentlyContinue }

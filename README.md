@@ -30,4 +30,4 @@ powershell -ExecutionPolicy Bypass -File tests/site-structure.ps1
 
 ## 배포
 
-`master` 브랜치에 푸시하면 GitHub Pages가 배포합니다. `.github/workflows/jekyll-build.yml`은 pull request와 push마다 Jekyll 빌드 및 구조 검사를 실행합니다.
+`master` 브랜치에 푸시하면 GitHub Pages가 빌드하고 배포합니다. `.github/workflows/jekyll-build.yml`은 pull request와 push마다 구조 및 내비게이션 동작 검사를 실행합니다.

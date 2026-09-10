@@ -35,7 +35,7 @@ Use a graphite monochrome palette with a restrained cool-gray accent, a consiste
 - Focus styles and `prefers-reduced-motion` are supported.
 - Internal assets and links use Jekyll `relative_url` filters.
 - Every page receives SEO/feed metadata through the shared head include.
-- A GitHub Actions workflow runs the supported Jekyll build on pushes and pull requests.
+- GitHub Pages performs the authoritative Jekyll build; a lightweight GitHub Actions workflow runs repository structure and navigation checks.
 
 ## Acceptance Criteria
 
@@ -45,4 +45,3 @@ Use a graphite monochrome palette with a restrained cool-gray accent, a consiste
 - Home contains no unused particle, fake form, lazy-loader, or counter code.
 - The mobile navigation is keyboard operable and pages do not overflow at 390px.
 - `bundle exec jekyll build` succeeds in CI and locally when Ruby/Bundler are installed.
-

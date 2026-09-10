@@ -102,12 +102,12 @@
 - Modify: `_config.yml`
 
 **Interfaces:**
-- Consumes: repository Gemfile and GitHub Pages supported build action.
-- Produces: personal-site contributor documentation and CI build status.
+- Consumes: GitHub Pages' native build and the repository test scripts.
+- Produces: personal-site contributor documentation and lightweight CI status alongside the native Pages build status.
 
 - [ ] Replace the theme README with repository purpose, content locations, and local build commands.
 - [ ] Remove demo content and release-drafter automation.
-- [ ] Add a GitHub Pages Jekyll build workflow for pushes and pull requests.
+- [ ] Add repository structure and navigation checks for pushes and pull requests; rely on GitHub Pages for the authoritative Jekyll build.
 - [ ] Remove placeholder SEO configuration and obsolete theme-package exclusions from `_config.yml`.
 - [ ] Run a placeholder/branding scan for `Not Pure Poole`, `xxxx`, and demo post titles.
 
@@ -126,4 +126,3 @@
 - [ ] Inspect deployed-source rendering at desktop and 390px using a local build when available.
 - [ ] Commit all scoped changes with `feat: unify portfolio and blog experience`.
 - [ ] Push the current `master` branch to `origin` and report the resulting commit hash.
-
