@@ -27,15 +27,21 @@ exclude:
   - not-pure-poole.gemspec
 
 # SEO
+image: /avatar.jpeg
+logo: /avatar.jpeg
 twitter:
   username: GooDongWoo
-  card: summary
-logo: /avatar.jpeg
+  card: summary_large_image
 social:
   name: GooDongWoo
   links:
     - https://github.com/GooDongWoo
 lang: ko
+
+# Search Engine Verification
+# 구글 서치콘솔 및 네이버 서치어드바이저 등록 시 아래 주석 해제 후 인증값 입력
+# google_site_verification: ""
+# naver_site_verification: ""
 
 sass:
   sass_dir: _sass
@@ -54,3 +60,14 @@ author:
   name: GooDongWoo
   url: https://github.com/GooDongWoo/
   email: wendy1301@naver.com
+
+# Defaults for SEO & Layout
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "GooDongWoo"
+      image: "/avatar.jpeg"
+

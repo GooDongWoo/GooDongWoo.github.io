@@ -1,6 +1,8 @@
-{% comment %}
-  Placeholder to allow defining custom head, in principle, you can add anything here, e.g. favicons:
+<!-- Favicon & Touch Icons -->
+<link rel="icon" type="image/jpeg" href="{{ '/avatar.jpeg' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/avatar.jpeg' | relative_url }}">
 
-  1. Head over to https://realfavicongenerator.net/ to add your own favicons.
-  2. Customize default _includes/custom-head.html in your source directory and insert the given code snippet.
-{% endcomment %}
+<!-- Search Engine Verification (Naver Search Advisor) -->
+{% if site.naver_site_verification %}
+<meta name="naver-site-verification" content="{{ site.naver_site_verification }}">
+{% endif %}
