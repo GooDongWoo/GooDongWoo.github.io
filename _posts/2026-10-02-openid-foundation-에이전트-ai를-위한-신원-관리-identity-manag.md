@@ -20,7 +20,7 @@ AI 에이전트가 유행이란다. 이제는 단순히 "오늘 날씨 어때?"�
 
 
 
-![분명 로컬에선 잘 돌아갔는데...?](https://media.giphy.com/media/9K2nFglCAQClO/giphy.gif)
+![분명 로컬에선 잘 돌아갔는데...?](/assets/images/memes/works-on-my-machine.gif)
 *▲ 분명 로컬에선 잘 돌아갔는데...?*
 
 
@@ -69,7 +69,7 @@ OpenID Foundation의 이 백서는 단순히 기술 표준을 만들자는 게 �
 
 
 
-![릴리즈 5분 전 긴급 핫픽스 상황](https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif)
+![릴리즈 5분 전 긴급 핫픽스 상황](/assets/images/memes/hotfix-in-production.gif)
 *▲ 릴리즈 5분 전 긴급 핫픽스 상황*
 
 

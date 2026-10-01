@@ -21,7 +21,7 @@ tags: [트렌드, 개발, 오픈소스]
 
 
 
-![코드가 왜 돌아가는지 아무도 모를 때](https://media.giphy.com/media/unQ3IJU2RG7DO/giphy.gif)
+![코드가 왜 돌아가는지 아무도 모를 때](/assets/images/memes/rage-computer-throw.gif)
 *▲ 코드가 왜 돌아가는지 아무도 모를 때*
 
 
@@ -79,7 +79,7 @@ sequenceDiagram
 
 
 
-![코드가 왜 돌아가는지 아무도 모를 때](https://media.giphy.com/media/unQ3IJU2RG7DO/giphy.gif)
+![코드가 왜 돌아가는지 아무도 모를 때](/assets/images/memes/rage-computer-throw.gif)
 *▲ 코드가 왜 돌아가는지 아무도 모를 때*
 
 

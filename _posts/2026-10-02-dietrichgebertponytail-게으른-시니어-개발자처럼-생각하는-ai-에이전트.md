@@ -24,7 +24,7 @@ tags: [트렌드, 개발, 오픈소스]
 
 
 
-![기술 스택을 새로 도입하기 전과 도입한 후의 모습](https://media.giphy.com/media/QMHoU66sBXCAU/giphy.gif)
+![기술 스택을 새로 도입하기 전과 도입한 후의 모습](/assets/images/memes/this-is-fine.gif)
 *▲ 기술 스택을 새로 도입하기 전과 도입한 후의 모습*
 
 
@@ -76,7 +76,7 @@ graph TD
 
 
 
-![분명 로컬에선 잘 돌아갔는데...?](https://media.giphy.com/media/9K2nFglCAQClO/giphy.gif)
+![분명 로컬에선 잘 돌아갔는데...?](/assets/images/memes/works-on-my-machine.gif)
 *▲ 분명 로컬에선 잘 돌아갔는데...?*
 
 

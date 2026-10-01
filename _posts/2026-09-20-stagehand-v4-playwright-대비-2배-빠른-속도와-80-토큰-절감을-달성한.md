@@ -2,7 +2,7 @@
 layout: post
 title: "Playwright로 AI 에이전트 만들다 통장 깨진 썰: Stagehand v4 뜯어보기"
 description: "Playwright 대비 속도 2배, 토큰 80% 절감을 달성한 브라우저 에이전트 SDK Stagehand v4 아키텍처 분석과 실무 개발자 관점의 솔직 후기"
-image: https://media.giphy.com/media/9K2nFglCAQClO/giphy.gif
+image: /assets/images/memes/works-on-my-machine.gif
 date: 2026-09-20 15:17:25 +0900
 categories: [Tech, AI]
 tags: [트렌드, 개발, 오픈소스]
@@ -27,7 +27,7 @@ tags: [트렌드, 개발, 오픈소스]
 
 
 
-![분명 로컬에선 잘 돌아갔는데...?](https://media.giphy.com/media/9K2nFglCAQClO/giphy.gif)
+![분명 로컬에선 잘 돌아갔는데...?](/assets/images/memes/works-on-my-machine.gif)
 *▲ 분명 로컬에선 잘 돌아갔는데...?*
 
 
@@ -108,7 +108,7 @@ console.log(data.invoices[0].amount);
 
 
 
-![새로운 오픈소스 라이브러리 스타 찍는 손가락](https://media.giphy.com/media/26AHPxxnSw1L9T1rW/giphy.gif)
+![새로운 오픈소스 라이브러리 스타 찍는 손가락](/assets/images/memes/github-star.gif)
 *▲ 새로운 오픈소스 라이브러리 스타 찍는 손가락*
 
 

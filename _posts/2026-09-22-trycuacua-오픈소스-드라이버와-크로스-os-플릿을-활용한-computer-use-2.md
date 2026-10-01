@@ -29,7 +29,7 @@ graph TD
 
 
 
-![분명 로컬에선 잘 돌아갔는데...?](https://media.giphy.com/media/9K2nFglCAQClO/giphy.gif)
+![분명 로컬에선 잘 돌아갔는데...?](/assets/images/memes/works-on-my-machine.gif)
 *▲ 분명 로컬에선 잘 돌아갔는데...?*
 
 
@@ -63,7 +63,7 @@ Cua가 영리한 건 모델 전략에서도 드러난다. 얘네는 모든 걸 G
 
 
 
-![코드가 왜 돌아가는지 아무도 모를 때](https://media.giphy.com/media/unQ3IJU2RG7DO/giphy.gif)
+![코드가 왜 돌아가는지 아무도 모를 때](/assets/images/memes/rage-computer-throw.gif)
 *▲ 코드가 왜 돌아가는지 아무도 모를 때*
 
 

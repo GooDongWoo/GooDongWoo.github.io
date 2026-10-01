@@ -22,7 +22,7 @@ tags: [트렌드, 개발, 오픈소스]
 
 
 
-![메모리 누수 잡으려다가 OS까지 날려먹을 뻔한 개발자](https://media.giphy.com/media/dhg2WApHqu7osn9SlJ/giphy.gif)
+![메모리 누수 잡으려다가 OS까지 날려먹을 뻔한 개발자](/assets/images/memes/mind-blown.gif)
 *▲ 메모리 누수 잡으려다가 OS까지 날려먹을 뻔한 개발자*
 
 
@@ -69,7 +69,7 @@ PageIndex의 기술 스택을 보면 개발자 입장에서 무릎을 탁 치게
 
 
 
-![기술 스택을 새로 도입하기 전과 도입한 후의 모습](https://media.giphy.com/media/QMHoU66sBXCAU/giphy.gif)
+![기술 스택을 새로 도입하기 전과 도입한 후의 모습](/assets/images/memes/this-is-fine.gif)
 *▲ 기술 스택을 새로 도입하기 전과 도입한 후의 모습*
 
 
